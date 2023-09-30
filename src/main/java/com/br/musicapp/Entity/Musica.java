@@ -7,25 +7,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Set;
 
 @Data
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name ="tb_artist")
-public class Artista implements Serializable {
-
-    private static final long serialVersionUID =1L;
+@Table(name = "tb_music")
+public class Musica implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
-
-    private String genero;
-
+    private Float duracao;
 
 }
